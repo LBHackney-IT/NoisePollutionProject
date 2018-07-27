@@ -1,0 +1,51 @@
+﻿@model NoisePollutionDashboard.ViewModels.NoisePollutionModel
+@{
+    ViewBag.Title = "Failed Records";
+}
+
+<div>
+    <h1>Failed Records</h1>
+</div>
+
+<div class="container-fluid">
+    <table class="table table-bordered" border="1">
+        <thead>
+            <tr>
+                <th>Eform Ref</th>
+                <th>Civica Ref</th>
+                <th>Form DateTime</th>
+@*                <th>@Html.ActionLink("Report Type", "Dashboard", new { sortBy = ViewBag.SortReportType, searchBy = Request.QueryString["searchBy"], search = Request["search"] })*@
+@*                <th>@Html.ActionLink("Res Comm", "Dashboard", new { sortBy = ViewBag.SortNoiseType, searchBy = Request.QueryString["searchBy"], search = Request["search"] })*@
+@*                <th>@Html.ActionLink("Day Details", "Dashboard", new { sortBy = ViewBag.SortDayDetail, searchBy = Request.QueryString["searchBy"], search = Request["search"] })*@
+@*                <th>@Html.ActionLink("Week Details", "Dashboard", new { sortBy = ViewBag.SortWeekDetail, searchBy = Request.QueryString["searchBy"], search = Request["search"] })*@
+                <th>Report Type</th>
+                <th>Res Comm</th>
+                <th>Day Details</th>
+                <th>Week Details</th>
+                <th>Problem Address</th>
+                <th>User Address</th>
+                <th>UPRN</th>
+            </tr>
+        </thead>
+        <tbody>
+        @{
+            foreach (var item in Model.lNoisePollutionDtos)
+            {
+            <tr>
+                <td>@Html.DisplayFor(model => item.ReferenceNumber)</td>
+                <td>@Html.DisplayFor(model => item.Diagnostics)</td>
+                <td>@Html.DisplayFor(model => item.FormDateTime)</td>
+                <td>@Html.DisplayFor(model => item.ReportType)</td>
+                <td>@Html.DisplayFor(model => item.ResidentialCommercial)</td>
+                <td>@Html.DisplayFor(model => item.DayDetails)</td>
+                <td>@Html.DisplayFor(model => item.WeekDetails)</td>
+                <td>@Html.DisplayFor(model => item.ProblemAddress)</td>
+                <td>@Html.DisplayFor(model => item.UserAddress)</td>
+                <td>@Html.DisplayFor(model => item.UserUPRN)</td>
+                <td><input type="button" value="Manually Push" /></td>
+            </tr>
+            }
+        }
+        </tbody>
+    </table>
+</div>

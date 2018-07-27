@@ -1,0 +1,14 @@
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\NoisePollution.exe.config
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\NoisePollution.exe
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\NoisePollution.pdb
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.csproj.CoreCompileInputs.cache
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.exe
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.pdb
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\Dapper.dll
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\Dapper.xml
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\NoisePollution.exe.manifest
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\bin\Debug\NoisePollution.application
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.exe.manifest
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.application
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.csproj.CopyComplete
+C:\Users\sostephens\source\repos\NoisePollution\NoisePollution\obj\Debug\NoisePollution.csprojResolveAssemblyReference.cache

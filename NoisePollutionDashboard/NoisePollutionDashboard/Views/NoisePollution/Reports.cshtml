@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div>
+    <h1>Reports</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+            <canvas id="canvas1" width="800" height="800"></canvas>
+            
+            @*          Chart creation for Report types*@
+            <script>
+                var countArray = @Html.Raw(Json.Encode(@ViewBag.rep));
+                var reportTypeArray = @Html.Raw(Json.Encode(@ViewBag.reportType));
+
+                var ctx = $("#canvas1");
+                var barChart = new Chart(ctx,
+                    {
+                        type: 'doughnut',
+                        data: {
+                            labels: reportTypeArray,
+                            datasets: [
+                                {
+                                    label: "Bar Chart Example",
+                                    data: countArray,
+                                    backgroundColor: ["rgba(65,131,215)", "rgba(240,52,52)", "rgba(243,156,18)"],
+                                    borderWidth:1
+                                }]
+                        }
+                    });
+            </script>
+        </div>
+        <div class="col-lg-6" style="alignment: center">
+            <canvas id="canvas2" width="800" height="800"></canvas>
+
+            @*        Chart creation for Residential and Commercial types*@
+            <script>
+                var countArray = @Html.Raw(Json.Encode(@ViewBag.rep1));
+                var resCommArray = @Html.Raw(Json.Encode(@ViewBag.resComm));
+
+                var ctx1 = $("#canvas2");
+                var barChart1 = new Chart(ctx1,
+                    {
+                        type: 'pie',
+                        data: {
+                            labels: resCommArray,
+                            datasets: [
+                                {
+                                    label: "Bar Chart Example",
+                                    data: countArray,
+                                    backgroundColor: ["rgba(65,131,215)", "rgba(46,204,113)", "rgba(240,52,52)"],
+                                    borderWidth:1
+                                }]
+                        }
+                    });
+            </script>
+        </div>
+    </div>
+</div>
+<hr />
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6" >
+            <canvas id="canvas3" width="350" height="400"></canvas>
+            @*        Chart creation for Noise types*@
+            <script>
+                var countArray = @Html.Raw(Json.Encode(@ViewBag.rep2));
+                var noiseTypeArray = @Html.Raw(Json.Encode(@ViewBag.noiseType));
+
+                var ctx1 = $("#canvas3");
+                var barChart1 = new Chart(ctx1,
+                    {
+                        type: 'bar',
+                        data: {
+                            labels: noiseTypeArray,
+                            datasets: [
+                                {
+                                    data: countArray,
+                                    backgroundColor: ["rgba(65,131,215)", "rgba(240,52,52)", "rgba(243,156,18)", "rgba(46,204,113)", "rgba(142,68,173)", "rgba(236,100,75)", "rgba(89,171,227)", "rgba(34,49,63)", "rgba(30,130,76)", "rgba(211,84,0)", "rgba(253,227,167)"],
+                                    borderWidth: 1
+                                }]
+                        },
+                        options: {
+                            maintainAspectRatio: true,
+                            scales: { xAxes: [{ ticks: { beginAtZero:true } }] },
+                            legend: {display:false}
+                        }
+                    });
+            </script>
+        </div>
+        <div class="col-lg-6" align="center">
+            <canvas id="canvas4" width="800" height="800"></canvas>
+
+            @*        Chart creation for Weekend and Weekday types*@
+            <script>
+                var countArray = @Html.Raw(Json.Encode(@ViewBag.rep3));
+                var weekendWeekdayArray = @Html.Raw(Json.Encode(@ViewBag.weekendWeekday));
+
+                var ctx1 = $("#canvas4");
+                var barChart1 = new Chart(ctx1,
+                    {
+                        type: 'bar',
+                        data: {
+                            labels: weekendWeekdayArray,
+                            datasets: [
+                                {
+                                    data: countArray,
+                                    backgroundColor: ["rgba(65,131,215)", "rgba(240,52,52)", "rgba(243,156,18)", "rgba(46,204,113)"],
+                                    borderWidth:1
+                                }]
+                        },
+                        options: {
+                            maintainAspectRatio: true,
+                            scales: { xAxes: [{ ticks: { beginAtZero:true } }] },
+                            legend: {display:false}
+                        }
+                    });
+            </script>
+        </div>
+    </div>
+</div>
