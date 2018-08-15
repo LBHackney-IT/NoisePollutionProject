@@ -1,3 +1,5 @@
 *.config
 .vs
 NoisePollution.xml
+Settings.Designer.cs
+Settings.settings

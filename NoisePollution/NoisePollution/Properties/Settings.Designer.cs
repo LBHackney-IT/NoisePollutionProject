@@ -32,5 +32,23 @@ namespace NoisePollution.Properties {
                 return ((string)(this["NoisePollution_LBHLicensingAPP_Service"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[EBS_EXT_LIVE_DATA].[ufs].[NOISE_LIGHT_ODOUR_DB]")]
+        public string liveNoiseDB {
+            get {
+                return ((string)(this["liveNoiseDB"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("[EBS_DEV_DATA].[ufs].[NOISE_LIGHT_ODOUR_DB]")]
+        public string devNoiseDB {
+            get {
+                return ((string)(this["devNoiseDB"]));
+            }
+        }
     }
 }
