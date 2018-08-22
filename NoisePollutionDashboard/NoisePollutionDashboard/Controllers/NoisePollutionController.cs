@@ -15,7 +15,7 @@ namespace NoisePollutionDashboard.Controllers
     {
         EformsContext.EformsContext _context = new EformsContext.EformsContext();
 
-        public ActionResult Dashboard(string searchBy, string search,string sortBy, int? page)
+        public ActionResult Dashboard(string searchBy, string search, string sortBy, int? page)
         {
 //            ViewBag.SortReportType = string.IsNullOrEmpty(sortBy) ? "Report desc" : "";
             ViewBag.SortReportType = sortBy == "ReportType" ? "Report desc" : "ReportType";

@@ -15,7 +15,7 @@ namespace NoisePollutionDashboard.ViewModels
         public NoisePollutionModel(List<NOISE_LIGHT_ODOUR_DB> lApplications, int? page)
         {
 
-            List<NoisePollutionDTO> tempList = new List<NoisePollutionDTO>();
+            var tempList = new List<NoisePollutionDTO>();
             if (lApplications != null)
             {
                 foreach (NOISE_LIGHT_ODOUR_DB application in lApplications)
